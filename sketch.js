@@ -1,7 +1,6 @@
 
 var gameState = "Intro"
 var lives = 3
-var SCORE = 0
 var score = 0
 
 
