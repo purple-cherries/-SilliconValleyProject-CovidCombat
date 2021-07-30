@@ -241,7 +241,7 @@ function draw(){
     }
 
     if(mousePressedOver(PlayButton)&&gameState==="Intro"){
-      gameState = "Mssg"
+      gameState = "Level1"
 
     }
 
