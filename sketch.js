@@ -1004,6 +1004,7 @@ if(mousePressedOver(q)&&gameState === "Level3"){
     q.visible = false
     b.visible = false
         b2.visible = false
+   back.visible = false
     ground2.visible = false
     Background.visible = false;
     Background1.visible = false;
