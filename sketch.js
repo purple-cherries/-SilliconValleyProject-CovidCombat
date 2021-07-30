@@ -1,6 +1,7 @@
 
 var gameState = "Intro"
 var lives = 3
+var SCORE = 0
 var score = 0
 
 
@@ -176,7 +177,7 @@ canvas = createCanvas(displayWidth, displayHeight-150)
     doc.addAnimation("doca",d1)
     doc.scale = 0.5
 
-    f = createSprite(200,displayHeight-200)
+    f = createSprite(200,displayHeight-350)
     f.addImage(win)
 
 
@@ -240,7 +241,7 @@ function draw(){
     }
 
     if(mousePressedOver(PlayButton)&&gameState==="Intro"){
-      gameState = "Level1"
+      gameState = "Mssg"
 
     }
 
@@ -887,7 +888,7 @@ if(mousePressedOver(q)&&gameState === "Level3"){
     textAlign(CENTER)
     text("CONGRATULATIONS!!",displayWidth/2,300)
     textSize(40)
-    text("You have succdone an amazing job!",displayWidth/2,displayHeight/2 + 100)
+    text("You have done an excellent job!",displayWidth/2,displayHeight/2 + 100)
 
     if(mousePressedOver(NextButton4) && gameState === "End"){
       gameState = "End2"
@@ -978,10 +979,13 @@ if(mousePressedOver(q)&&gameState === "Level3"){
     textAlign(CENTER)
     text("A final message from the creator:",displayWidth/2,displayHeight/2 - 300)
     textSize(30)
-    text("'You don't have to save the city to be brave...",displayWidth/2,displayHeight/2 - 200)
+    text("'You don't have to save a city to be brave...",displayWidth/2,displayHeight/2 - 200)
     text("To be brave, be cautious, stay healthy, and help protect each other, ",displayWidth/2,displayHeight/2 - 100)
     textSize(40)
     text("#HandsSpaceSafe'",displayWidth/2,displayHeight/2)
+
+    Restart.x = displayWidth/2
+    Restart.y = displayHeight/2+200
 
     if(mousePressedOver(Restart) && gameState === "Mssg"){
       gameState = "Intro"
@@ -1003,12 +1007,11 @@ if(mousePressedOver(q)&&gameState === "Level3"){
     q.visible = false
     b.visible = false
         b2.visible = false
-   back.visible = false
     ground2.visible = false
     Background.visible = false;
     Background1.visible = false;
     o.visible = true
-
+back.visible= false
     Background2.visible = false
    // doc.visible=false;
     NextButton.visible = false
